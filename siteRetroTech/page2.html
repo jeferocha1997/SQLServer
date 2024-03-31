@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/estilo2.css">
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <title>RetroTech - O seu ponto de notícias</title>
+</head>
+<body>
+<div class="slide">
+    <div class="slides">
+        <div id="voltar" class="btn">
+            <i class="fas fa-chevron-left"></i>
+        </div>
+        <div id="proximo" class="btn">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <!-- Imagens-->
+        <div class="image" id="imagem1">
+            <img src="./imagens/noticias/imagem1.jpg" alt="Imagem1"/>
+            <div class="info">
+                <h3>Título da Imagem 1</h3>
+                <p>Descrição da Imagem 1.</p>
+                <span>Data de Publicação: 2024-03-30</span>
+            </div>
+        </div>
+        <div class="image" id="imagem2">
+            <img src="./imagens/noticias/imagem2.jpg" alt="Imagem2"/>
+            <div class="info">
+                <h3>Título da Imagem 2</h3>
+                <p>Descrição da Imagem 2.</p>
+                <span>Data de Publicação: 2024-03-31</span>
+            </div>
+        </div>
+        <div class="image" id="imagem3">
+            <img src="./imagens/noticias/imagem3.jpg" alt="Imagem3"/>
+            <div class="info">
+                <h3>Título da Imagem 3</h3>
+                <p>Descrição da Imagem 3.</p>
+                <span>Data de Publicação: 2024-04-01</span>
+            </div>
+        </div>
+        <div class="image" id="imagem4">
+            <img src="./imagens/noticias/imagem4.jpg" alt="Imagem4"/>
+            <div class="info">
+                <h3>Título da Imagem 4</h3>
+                <p>Descrição da Imagem 4.</p>
+                <span>Data de Publicação: 2024-04-02</span>
+            </div>
+        </div>
+    </div>
+    <!-- botao de navegacao-->
+    <div class="balls">
+        <div class="imgAtual" id="0"></div>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+    </div>
+</div>
+
+<script>
+    var quant = document.querySelectorAll('.slides .image');
+    var atual = 0;
+    var voltar = document.getElementById('voltar');
+    var proximo = document.getElementById('proximo');
+
+    var balls = document.querySelector('.balls');
+    var pos = balls
+    console.log(pos);
+    for (let i = 0; i < quant.length; i++) {
+        var div = document.createElement('div');
+        div.id = i; // Atribui IDs únicos a cada elemento
+        balls.appendChild(div);
+    }
+
+    document.getElementById('0').classList.add('imgAtual');
+    var pos = document.querySelectorAll('.balls div');
+
+    for (let i = 0; i < pos.length; i++) {
+        pos[i].addEventListener('click', () => {
+            atual = parseInt(pos[i].id); // Converte para número
+            slide();
+        });
+    }
+
+    voltar.addEventListener('click', () => {
+        atual--;
+        slide();
+    });
+
+    proximo.addEventListener('click', () => {
+        atual++;
+        slide();
+    });
+
+    function slide() {
+        if (atual >= quant.length) {
+            atual = 0;
+        } else if (atual < 0) {
+            atual = quant.length - 1;
+        }
+
+        // Oculta todas as imagens
+        quant.forEach((img) => {
+            img.style.display = 'none';
+        });
+
+        // Exibe apenas a imagem atual
+        quant[atual].style.display = 'block';
+
+        // Atualiza a classe dos elementos .balls
+        pos.forEach((ball) => {
+            ball.classList.remove('imgAtual');
+        });
+        pos[atual].classList.add('imgAtual');
+    }
+
+    setInterval(() => {
+        atual++;
+        slide();
+
+    }, 4000);
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1c1b1b;
+}
+
+.slide {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+}
+
+.slides {
+    width: 5120px;
+    display: flex;
+}
+
+.image img {
+    width: 800px; /* Ajuste para o tamanho do slide */
+    height: 400px; /* Ajuste para o tamanho do slide */
+}
+
+#atual {
+    transition: all 2s;
+}
+
+.btn {
+    position: absolute;
+    color: #e6e6e6;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+}
+
+#voltar {
+    top: 50%;
+    left: 10%;
+}
+
+#proximo {
+    top: 50%;
+    right: 10%;
+}
+
+.balls {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    bottom: 10px; /* Posicionando os botões de navegação na parte inferior */
+}
+
+.balls div {
+    transition: all 0.5s;
+    border: 3px #f0f0f0;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.balls div:hover {
+    background: #f0f0f0;
+}
+
+.imgAtual {
+    transition: all 0.5s;
+    background: #f0f0f0;
+}
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.info p {
+    margin-bottom: 5px;
+}
+
+.info span {
+    font-size: 0.8em;
+}
+

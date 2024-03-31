@@ -1,0 +1,204 @@
+/* Limpar buffer */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    justify-content: center;
+    align-items: center;
+    background: #2a803d; /* Alterado o fundo para outro tom de verde */
+}
+
+.slide {
+    position: relative;
+    background-color: #1c1b1b;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+    margin-bottom: 20px; /* Reduz a margem inferior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.slides {
+    width: 5120px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;/* Centraliza as imagens horizontalmente */
+}
+
+.image img {
+    width: 100%; /* Ajustado para ocupar toda a largura do slide */
+    height: 400px; /* Mantido o tamanho original */
+}
+
+/* Botões */
+
+.btn {
+    color: #e6e6e6;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+    z-index: 999; /* Defina um valor alto para garantir que o botão esteja sobre o slide */
+}
+
+
+.btn:hover {
+    transform: scale(1.5);
+}
+
+#voltar {
+    top: 50%;
+    left: 10%;
+}
+
+#proximo {
+    top: 50%;
+    right: 10%;
+}
+.balls {
+    position: absolute;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.balls div {
+    transition: all 0.5s;
+    border: 3px #f0f0f0;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.balls div:hover {
+    background: #f0f0f0;
+}
+
+.imgAtual {
+    transition: all 0.5s;
+    background: #f0f0f0;
+}
+
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+
+}
+
+.info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.info p {
+    margin-bottom: 5px;
+}
+
+.info span {
+    font-size: 0.8em;
+}
+
+/* Área do cabeçalho */
+#area-cabecalho {
+    background-color: #2a803d;
+    padding: 15px;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura do navegador */
+}
+
+#area-logo {
+    color: #2a803d;
+}
+
+/* Área do menu */
+#area-menu {
+    background-color: #2a803d;
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura do navegador */
+    position: relative;
+}
+
+.menu-item {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.menu-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.menu-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rodapé */
+/* Rodapé */
+#rodape {
+    background: rgb(200, 204, 200);
+    width: 100%; /* Ocupa toda a largura do navegador */
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Adiciona posicionamento relativo */
+    bottom: 0; /* Alinha o rodapé na parte inferior da página */
+}
+
+
+/* Formatações gerais */
+h1 {
+    color: #4e4e4e;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #f7b600;
+}
+
+h3 {
+    color: #3D9B40;
+    background: #CCC;
+    padding: 5px;
+}
+
+.branco {
+    color: white;
+}

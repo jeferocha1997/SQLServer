@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Notícia</title>
+    <link rel="stylesheet" href="./css/criarNoticia.css">
+</head>
+<body>
+<!-- Formulário de Inserir Notícia -->
+<section id="inserir-noticia">
+    <h2>Inserir Notícia</h2>
+    <form>
+        <div class="input-group">
+            <label for="imagem">Imagem:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*" required>
+        </div>
+        <div class="input-group">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+        </div>
+        <div class="input-group">
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="5" required></textarea>
+        </div>
+        <div class="input-group">
+            <label for="data-expiracao">Data de Expiração:</label>
+            <input type="date" id="data-expiracao" name="data-expiracao" required>
+        </div>
+        <div class="button-group">
+            <button type="submit">Inserir Notícia</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>

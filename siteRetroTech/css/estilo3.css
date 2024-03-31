@@ -1,0 +1,177 @@
+/* Limpar buffer */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff0000; /* Alterado o fundo para outro tom de verde */
+}
+
+/* Área do cabeçalho */
+#area-cabecalho {
+    background-color: #2a803d;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+#area-logo {
+    color: #f0e8e8;
+}
+
+/* Área do menu */
+#area-menu {
+    background-color: #2a803d;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.menu-item {
+    display: inline-block;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+}
+
+.menu-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.menu-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Slides */
+.slide {
+    position: relative;
+    background-color: #1c1b1b;
+    width: 100%;
+    margin: 0 auto;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides {
+    width: 100%; /* Largura total dos slides */
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    width: 100%;
+    height: 400px;
+}
+
+/* Botões de navegação */
+.btn {
+    position: absolute;
+    color: #e6e6e6;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 1.7em;
+}
+
+.btn:hover {
+    transform: scale(1.5);
+}
+
+.btn-voltar {
+    left: 10px;
+}
+
+.btn-proximo {
+    right: 10px;
+}
+
+/* Marcadores de navegação */
+.balls {
+    position: absolute;
+    /* Removido width: 100%; */
+    display: flex;
+    justify-content: center;
+    bottom: 10px;
+}
+
+.balls div {
+    transition: all 0.5s;
+    border: 3px solid #f0f0f0; /* Corrigido para border: 3px solid #f0f0f0; */
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.balls div:hover {
+    background: #f0f0f0;
+}
+
+.imgAtual {
+    transition: all 0.5s;
+    background: #f0f0f0;
+}
+
+/* Informações sobre as imagens */
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    max-width: 300px;
+}
+
+.info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+.info p {
+    margin-bottom: 5px;
+}
+
+.info span {
+    font-size: 0.8em;
+}
+
+/* Rodapé */
+#rodape {
+    background: rgb(200, 204, 200);
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
