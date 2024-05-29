@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Serviço Node.js
+  nodejs:
+    build:
+      context: .
+      dockerfile: Abex-IV-main\Dockerfile
+    image: imagem
+    volumes:
+      - ./API:/app  # Monta o diretório local API no diretório de trabalho do contêiner
+    ports:
+      - "8000:8000"  # Mapeia a porta 8000 do contêiner para a porta 8000 do host
+    depends_on:
+      - sqlserver  # Dependência do serviço SQL Server
+
+  # Serviço SQL Server
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:latest
+    environment:
+      SA_PASSWORD: "**Senh4**"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"  # Mapeia a porta 1433 do contêiner para a porta 1433 do host
+    volumes:
+      - ./API/database/PopularSQL:/app/database/PopularSQL
